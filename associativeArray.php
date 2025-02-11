@@ -19,15 +19,40 @@
                 'author' => 'Andy Weir',
                 'releaseYear' => 2021,
                 'purchaseUrl' => 'http://example.com'
+            ],
+            [
+                'name' => 'Hail Mary',
+                'author' => 'Andy Weir',
+                'releaseYear' => 2023,
+                'purchaseUrl' => 'http://example.com'
             ]
+
         ]; 
+
+        $filterBooks = array_filter($books, function($book){
+            return $book['releaseYear'] >= 1957 and $book['releaseYear'] <= 2020;
+        });
     ?>
-    <h3>
-        <ul>
-            <?php foreach($books as $book): ?>
+
+ 
+    <!--
+<h3>
+    <ul>
+    <?php foreach($books as $book): ?>
+        <li>
+             <a href="<?=$book['purchaseUrl'] ?>">
+                    <?= $book['name'] ?>  (<?= $book['releaseYear'] ?>)
+             </a>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+</h3>
+-->
+<ul>
+            <?php foreach($filterBooks as $book): ?>
             <li>
                  <a href="<?=$book['purchaseUrl'] ?>">
-                        <?= $book ['name']?>  (<?=$book['releaseYear']?>)
+                        <?= $book ['name']?>  (<?=$book['releaseYear']?>) - <?= $book['author'] ?>
                  </a>
                 
 
@@ -35,5 +60,6 @@
             <?php endforeach; ?>
         </ul>
     </h3>
+
 </body>
 </html>

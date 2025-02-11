@@ -27,9 +27,9 @@
             <?php foreach($books as $book): ?>
             <li>
                  <a href="<?=$book['purchaseUrl'] ?>">
-                        <?= $book ['name']?> 
+                        <?= $book ['name']?>  (<?=$book['releaseYear']?>)
                  </a>
-                 (<?=$book['releaseYear']?>)
+                
 
             </li>
             <?php endforeach; ?>

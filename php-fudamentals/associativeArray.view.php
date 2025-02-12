@@ -9,19 +9,6 @@
 
 
  
-    <!--
-<h3>
-    <ul>
-    <?php foreach($books as $book): ?>
-        <li>
-             <a href="<?=$book['purchaseUrl'] ?>">
-                    <?= $book['name'] ?>  (<?= $book['releaseYear'] ?>)
-             </a>
-        </li>
-        <?php endforeach; ?>
-    </ul>
-</h3>
--->
 <ul>
             <?php foreach($filterBooks as $book): ?>
             <li>

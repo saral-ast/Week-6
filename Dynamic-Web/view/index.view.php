@@ -8,4 +8,4 @@
     </p>
 </main>
 
-<?php require 'partials/foot.php' ?>
+<?php require 'partials/foot.php'?>

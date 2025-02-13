@@ -1,5 +1,7 @@
 <?php
-$heading = "Home";
 
 // exit();
-require 'view/index.view.php';
+// dd($router)
+view('index.view.php',[
+    'heading' => 'Home' 
+]);

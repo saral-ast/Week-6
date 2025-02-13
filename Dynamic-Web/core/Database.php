@@ -1,4 +1,11 @@
 <?php
+
+
+namespace Core;
+
+use Core\Response;
+use Core\Router;
+use PDO;
 class Database{
     public $connection;
     public $statement;

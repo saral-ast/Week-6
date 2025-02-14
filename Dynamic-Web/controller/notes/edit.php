@@ -1,5 +1,4 @@
 <?php
-
 use Core\Database;
 use Core\App;
 
@@ -11,12 +10,11 @@ $note = $db -> query("SELECT *FROM notes where id = :id",[
 )->findOrFail();
 
 authorize($note['user_id'] == $currentUser);
-
-
-view('notes/show.view.php',[
-        'heading' => "My Note",
+view(
+    "notes/edit.view.php",
+    [
+        "heading" => "Edit Note",
         'note' => $note
-    ] );
-
-
-
+        
+    ]
+);

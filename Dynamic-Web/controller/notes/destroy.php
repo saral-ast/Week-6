@@ -1,9 +1,12 @@
 <?php
+// dd("Please");
 
+use Core\App;
 use Core\Database;
 
-$config = require base_path('config.php');
-$db = new Database($config['database']);
+
+$db =App::resolve(Database ::class);
+
 $currentUser = 2;
 
 $note = $db -> query("SELECT *FROM notes where id = :id",[

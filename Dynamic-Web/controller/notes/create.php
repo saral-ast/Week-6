@@ -1,5 +1,5 @@
 <?php
 view('notes/create.view.php',[
-    'heading' => "My Notes",
+    'heading' => "Note",
     'errors' => []
 ] );

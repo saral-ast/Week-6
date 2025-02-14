@@ -6,7 +6,7 @@
     <h1 class="text-4xl font-extrabold text-gray-900 dark:text-white mb-6"><?= $heading ?></h1>
     <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">Create a New Note</p>
 
-    <form action="<?= isset($errors['note']) ? '/notes/create' : '/notes' ?>" method="POST" class="max-w-md w-full bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg">
+    <form action="/notes" method="POST" class="max-w-md w-full bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg">
         <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
             Your Note
         </label>
